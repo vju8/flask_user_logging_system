@@ -14,8 +14,8 @@ Regarding the topic of user registering and logging, I used some simple rules of
 
 ## Screenshots
 
-![Screenshot 1](screenshots/bmr.png)
+![Screenshot 1](screenshots/screenshot1.png)
 *User Login*
 
-![Screenshot 1](screenshots/bmr.png)
+![Screenshot 1](screenshots/screenshot2.png)
 *User successfully logged in*
