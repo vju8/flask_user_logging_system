@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Register Page{% endblock %}
+
+{% block content %}
+
+    {% include "flashed_messages.html" %}
+
+    <form action="#" method="post">
+        <br>
+        <p style="font-size:24px; padding-left: 50px">
+            <strong>User Registration</strong>
+        </p>
+        <div style="padding-left: 50px;">  
+            <p style="font-size:20px; width: 100px; display: inline-block;">Username: </p>
+            <input type="text" name="new_username" style="margin-left: 10px;"> 
+            <br> 
+            <p style="font-size:20px; width: 100px; display: inline-block;">Password:</p>
+            <input type="password" name="new_password" id="new_password" style="margin-left: 10px;">
+            <button type="button" onclick="togglePasswordVisibility()" style="background: none; border: none; padding: 4;">
+                <img src="{{ url_for('static', filename='show.png') }}" alt="pw show/hide" width="15" height="15" style="display: block; margin: auto;">
+            </button>
+            <p> <input type="submit" value="Register" style="margin-left: 170px; background-color: rgb(201, 153, 65)"></p>
+            <p> 
+                Have an account?
+                <button type="button" style="margin-left: 50px; background-color: rgb(18, 150, 78)" onclick="redirectToRegister()">Login</button>
+            </p>
+        </div>
+    </form>
+
+    <script>
+        function redirectToRegister() {
+            window.location.href = "/login";
+        }
+
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("new_password");
+            if (passwordField.type == "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+{% endblock %}
